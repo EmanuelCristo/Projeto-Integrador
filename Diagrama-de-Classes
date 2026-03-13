@@ -1,0 +1,80 @@
+classDiagram
+    class Pessoa{
+        string Nome
+        string e-mail
+        bool permissão
+        cadastrar()
+        atualizar()
+        deletar()
+        reservar()
+        devolver()
+    }
+    class Servidor{
+        Int SIAPE
+        String Função
+    }
+    class Aluno{
+        Int Matrícula
+    }
+    class Salas{
+        string Nome
+        string Tipo
+        string Anexo
+        criar()
+        atualizar()
+        deletar()
+    }
+    class Chaves{
+        int Número de Cópias
+        int ID
+        string Status
+    }
+
+    Pessoa<|--Servidor
+    Pessoa<|--Aluno
+
+    Salas "1" -- "1..n" Chaves : Possui
+    Chaves "1..2" -- "1" Pessoa: reserva
+
+```
+```mermaid
+
+classDiagram
+    class Pessoa{
+        string Nome
+        string e-mail
+        bool permissão
+        cadastrar()
+        atualizar()
+        deletar()
+        reservar()
+        devolver()
+    }
+    class Servidor{
+        Int SIAPE
+        String Função
+    }
+    class Aluno{
+        Int Matrícula
+    }
+    class Salas{
+        string Nome
+        string Tipo
+        string Anexo
+        criar()
+        atualizar()
+        deletar()
+    }
+    class Chaves{
+        int Número de Cópias
+        int ID
+        string Status
+    }
+
+    Pessoa<|--Servidor
+    Pessoa<|--Aluno
+
+    Salas "1" -- "1..n" Chaves : Possui
+    Chaves "1..2" -- "1" Pessoa: reserva
+
+```
